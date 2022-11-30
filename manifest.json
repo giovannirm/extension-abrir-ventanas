@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Extensión para abrir ventanas",
+    "description": "Es una extensión básica de aprendizaje",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/anonymous-16.png",
+        "32": "images/anonymous-32.png",
+        "64": "images/anonymous-64.png",
+        "128": "images/anonymous-128.png"
+      }
+    },
+    "icons": {
+      "16": "images/anonymous-16.png",
+      "32": "images/anonymous-32.png",
+      "64": "images/anonymous-64.png",
+      "128": "images/anonymous-128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://escuelafullstack.com/slides/*"],
+        "exclude_matches": ["https://escuelafullstack.com/slides/slide/*"],
+        "js": ["scripts/content.js"]
+      }
+    ]
+  }
